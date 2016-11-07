@@ -11,7 +11,7 @@ app.config(function($stateProvider,$urlRouterProvider){
       templateUrl:'../views/messagePage.html'
     })
 });
-app.controller('Ctrl', function($scope, socket,$state,$mdToast){
+app.controller('Ctrl', function($scope, socket,$state,$mdToast,$window){
   $scope.name="";
   $scope.channel="";
   $scope.message="";
@@ -39,6 +39,7 @@ app.controller('Ctrl', function($scope, socket,$state,$mdToast){
       $scope.messages.push(tempObj);
     }
     socket.emit('msg',msg);
+    $window.scrollTo(0,document.documentElement.scrollHeight);
   }
   socket.on('notification',function(data){
     $mdToast.show({
@@ -52,6 +53,7 @@ app.controller('Ctrl', function($scope, socket,$state,$mdToast){
     $scope.$apply(function () {
       $scope.messages.push(data);
     });
+    $window.scrollTo(0,document.documentElement.scrollHeight);
   });
 });
 app.factory('socket', ['$rootScope', function($rootScope) {

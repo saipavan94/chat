@@ -21,6 +21,7 @@
           </div>
         </div>
         </li>
+      <div id="bottom"></div>
     </ul>
   </div>
   <div layout="row" layout-align="center center">
@@ -28,7 +29,7 @@
       <input type="text" class="textarea" ng-model="message" placeholder="Enter your message here !!">
     </div>
     <div class="col-sm-2">
-      <md-button ng-click="sendMsg(message)" id="sendButton" aria-label="send">
+      <md-button ng-click="sendMsg(message);message=''" id="sendButton" aria-label="send">
         <md-icon id="sendIcon" class="material-icons">send</md-icon>
       </md-button>
     </div>

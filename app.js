@@ -16,7 +16,6 @@ io.on('connection',function(socket){
   socket.on('connectUser',function(data){
     user=data.name;
     channel=data.channel;
-    console.log(data);
     socket.join(data.channel);
     socket.emit('notification','welcome '+data.name+' !!');
     socket.broadcast.to(data.channel).emit('notification',data.name+' connected');
@@ -31,7 +30,6 @@ io.on('connection',function(socket){
   })
   socket.on('disconnect',function(){
     socket.broadcast.to(channel).emit('notification',user+' has left')
-    console.log("user disconnected");
   })
 })
 http.listen(process.env.PORT || 3000, function(){
