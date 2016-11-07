@@ -33,6 +33,6 @@ io.on('connection',function(socket){
     console.log("user disconnected");
   })
 })
-http.listen(8000,function(){
-  console.log('listening to port 8000');
-})
+http.listen(process.env.PORT || 3000, function(){
+  console.log('listening on', http.address().port);
+});
