@@ -1,0 +1,21 @@
+<div id="homeBackground" layout="row" layout-align="center center" layout-fill>
+  <div layout="column" flex="80" flex-sm="40" flex-md="40" flex-lg="35" flex-gt-lg="30" >
+    <md-input-container>
+      <label id="introLabel">Name</label>
+      <input id="inputLabel" required name="Name" ng-model="name">
+      <div>
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+    <md-input-container>
+      <label id="introLabel">Group</label>
+      <input id="inputLabel" required name="Group" ng-model="channel">
+      <div>
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+    <div layout="row" layout-align="center center">
+      <md-button class="md-raised" id="chatButton"  ui-sref="messagePage" ng-click="connect(name,channel)">chat</md-button>
+    </div>
+  </div>
+</div>

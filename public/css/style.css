@@ -1,0 +1,170 @@
+body{
+  background: url(../img/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#introLabel{
+  color:rgba(225, 225, 225, 0.7);
+  font-size: 30px;
+}
+#inputLabel{
+  color: rgba(225, 225, 225, 0.9);
+  font-size: 25px;
+}
+#chatButton{
+  background:rgba(224,199,202, 0.4);
+  color:white;
+}
+#msgBox{
+   width: 100%;
+   opacity:0.7
+}
+#msgRow{
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  position: fixed;
+}
+input.textarea {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    background: #fafafa;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    padding-right: 120px;
+    color: #666;
+    font-weight: 400;
+}
+#sendButton{
+    position: fixed;
+    display: block;
+    bottom: 0px;
+    right: 5px;
+    width: 100px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+#sendIcon{
+  font-size: 25px;
+}
+ul{
+  padding: 0;
+}
+ul li{
+  padding-left: 5px;
+  border-radius: 5px;
+}
+.msgHeader {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 50px;
+    background: rgba(82,179,217,0.9);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.userName{
+  color: white;
+  margin-top: 8px;
+  padding-left: 20px;
+
+}
+.mainSpacing{
+  margin-top: 55px;
+}
+#msgUserName{
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.6);
+  font-style: italic;
+  font-size: 18px;
+  padding-left: 8px;
+}
+#msgContent{
+  font-size: 20px;
+  padding-left: 15px;
+  color: white;
+}
+#msgBackground{
+  border-radius: 5px;
+  background: rgba(167,159,163,0.5);
+}
+#msgBackgroundUser{
+  padding-left: 0;
+  border-radius: 5px;
+  background: rgba(167,159,163,0.5);
+  padding: 5px;
+}
+#msgBackgroundUser p{
+  padding: 0;
+}
+#msgArea{
+  background: url(../img/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 50px;
+}
+ul li{
+  margin-top: 7px;
+  list-style: none;
+}
+
+@media (max-width: 959px) {
+  .md-toast {
+    position: fixed;
+    top: 0;
+    width: 50%;
+    margin: auto;
+    z-index: 10000;
+  }
+  input.textarea {
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      width: 100%;
+      height: 50px;
+      font-size: 23px;
+      background: #fafafa;
+      border: none;
+      outline: none;
+      padding-left: 20px;
+      padding-right: 100px;
+      color: #666;
+      font-weight: 400;
+  }
+  #sendButton{
+      position: fixed;
+      display: block;
+      bottom: 1px;
+      right: 0px;
+      width: 80px;
+      height: 49px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: pointer;
+      margin-bottom: 0;
+  }
+  #sendIcon{
+    font-size: 28px;
+  }
+}

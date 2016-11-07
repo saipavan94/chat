@@ -1,0 +1,36 @@
+<div class="container-fluid" id="msgArea">
+  <div layout="row" class="msgHeader">
+    <h2 class="userName">{{name}}</h2>
+  </div>
+  <div class="mainSpacing">
+    <ul layout="column">
+      <li ng-repeat="msg in messages track by $index">
+        <div layout="row" ng-if="!msg.sender">
+          <div layout="row" flex="70">
+            <div layout="row" id="msgBackground" layout-wrap>
+                <h4 layout="column" flex="100" id="msgUserName">{{msg.name}}</h4>
+                <p layout="column" flex="100" id="msgContent">{{msg.message}}</p>
+            </div>
+          </div>
+        </div>
+        <div layout="row" ng-if="msg.sender" layout-align="end center">
+          <div layout="row" flex="70" layout-align="end center">
+            <div layout="row" id="msgBackgroundUser"  layout-wrap>
+                <p layout="column" flex="100" id="msgContent">{{msg.message}}</p>
+            </div>
+          </div>
+        </div>
+        </li>
+    </ul>
+  </div>
+  <div layout="row" layout-align="center center">
+    <div class="col-sm-10">
+      <input type="text" class="textarea" ng-model="message" placeholder="Enter your message here !!">
+    </div>
+    <div class="col-sm-2">
+      <md-button ng-click="sendMsg(message)" id="sendButton" aria-label="send">
+        <md-icon id="sendIcon" class="material-icons">send</md-icon>
+      </md-button>
+    </div>
+  </div>
+</div>
