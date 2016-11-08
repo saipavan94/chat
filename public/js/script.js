@@ -43,10 +43,13 @@ app.controller('Ctrl', function($scope, socket,$state,$mdToast,$window){
   }
   socket.on('notification',function(data){
     $mdToast.show({
-      template: '<md-toast class="md-toast">' + data + '</md-toast>',
+      template: '<md-toast class="md-toast"> Welcome  <h4> '+ data.name +'!!</h4></md-toast>',
       hideDelay: 1100,
       position: 'top right'
-  });
+    });
+    $scope.$apply(function () {
+      $scope.messages=data.msgArray;
+    });
 });
   socket.on('msg',function(data){
     data.sender=false;
