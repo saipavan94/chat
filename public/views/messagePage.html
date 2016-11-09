@@ -5,7 +5,7 @@
   <div class="mainSpacing">
     <ul layout="column">
       <li ng-repeat="msg in messages track by $index">
-        <div layout="row" ng-if="!msg.sender">
+        <div layout="row" ng-if="msg.name!=name">
           <div layout="row" flex="70">
             <div layout="row" id="msgBackground" layout-wrap>
                 <h4 layout="column" flex="100" id="msgUserName">{{msg.name}}</h4>
@@ -13,7 +13,7 @@
             </div>
           </div>
         </div>
-        <div layout="row" ng-if="msg.sender" layout-align="end center">
+        <div layout="row" ng-if="msg.name==name" layout-align="end center">
           <div layout="row" flex="70" layout-align="end center">
             <div layout="row" id="msgBackgroundUser"  layout-wrap>
                 <p layout="column" flex="100" id="msgContent">{{msg.message}}</p>
